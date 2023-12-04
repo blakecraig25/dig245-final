@@ -1,2 +1,56 @@
 
 /* css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+.page {
+    text-align: center;
+    padding: 20px;
+    /* display: none; */
+}
+
+.container {
+    text-align: center;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none
+}
+
+#toggleButtonColor {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    /* border: none; */
+    cursor: pointer;
+}
+
+#toggleButtonFontColor {
+    background-color: #bf0603;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+#buttonBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+#buttonBar button {
+    margin-right: 10px;
+}
