@@ -10,7 +10,7 @@
     
 </head>
 
-<body id="app">
+<body id="app" class="light-theme">
     <div id="buttonBar" class="fixed-top">
         <button class="button" onclick="toggleFontSize()">Toggle Font Size</button>
         <button id="toggleButtonColor" class="button" onclick="toggleColors()">Toggle Button Color</button>
@@ -21,14 +21,15 @@
     
     <!-- visible content goes here -->
     <div id="start-page" class="page" style="margin-top: 70px;">
-        <h1>Welcome to the Quiz</h1>
-        <button class="button" onclick="startQuiz(); toggleColors();">Start</button>
+        <h1>Your Star Wars Watch Survey</h1>
+        <button class="button" onclick="startQuiz();">Start</button>
     </div>
+    <div id="start-page">Text to check</div>
 
     <div id="quiz-page" class="page" style="display: none">
         <div class="container mt-5">
             <!-- Question 1 -->
-            <div class="card mb-3 background light-theme">
+            <div class="card mb-3 light-theme">
                 <div class="card-header">
                     <h2>As a neighboring system is under attack by the Trade Federation, a pair of Jedi must uncover the secrets behind 
                         this attack and free the planet from this invasive droid force. What story is this?</h2>
@@ -36,16 +37,16 @@
                 <div class="card-body">
                     <form id="quiz-form">
                         <label class="form-check-label">
-                            <input type="radio" name="question1" value="The Phantom Menace" class="form-check-input"> The Phantom Menace (Correct Answer)
+                            <input type="radio" name="question1" value="The Phantom Menace" class="form-check-input" onclick="updateUserAnswers(1, value)"> The Phantom Menace (Correct Answer)
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question1" value="A New Hope" class="form-check-input"> A New Hope
+                            <input type="radio" name="question1" value="A New Hope" class="form-check-input" onclick="updateUserAnswers(1, value)"> A New Hope
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question1" value="The Bad Batch" class="form-check-input"> The Bad Batch
+                            <input type="radio" name="question1" value="The Bad Batch" class="form-check-input" onclick="updateUserAnswers(1, value)"> The Bad Batch
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question1" value="The Clone Wars" class="form-check-input"> The Clone Wars
+                            <input type="radio" name="question1" value="The Clone Wars" class="form-check-input" onclick="updateUserAnswers(1, value)"> The Clone Wars
                         </label>
                     </form>
                     <div class="result-container">The Phantom Menace</div>
@@ -63,16 +64,16 @@
                 <div class="card-body">
                     <form id="quiz-form">
                         <label class="form-check-label">
-                            <input type="radio" name="question2" value="Attack of the Clones (Correct Answer)" class="form-check-input"> Attack of the Clones (Correct Answer)
+                            <input type="radio" name="question2" value="Attack of the Clones" class="form-check-input" onclick="updateUserAnswers(2, value)"> Attack of the Clones (Correct Answer)
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question2" value="The Clone Wars" class="form-check-input"> The Clone Wars
+                            <input type="radio" name="question2" value="The Clone Wars" class="form-check-input" onclick="updateUserAnswers(2, value)"> The Clone Wars
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question2" value="The Bad Batch" class="form-check-input"> The Bad Batch
+                            <input type="radio" name="question2" value="The Bad Batch" class="form-check-input" onclick="updateUserAnswers(2, value)"> The Bad Batch
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question2" value="Rogue One" class="form-check-input"> Rogue One
+                            <input type="radio" name="question2" value="Rogue One" class="form-check-input" onclick="updateUserAnswers(2, value)"> Rogue One
                         </label>
                     </form>
                     <div class="result-container">Attack of the Clones</div>
@@ -89,16 +90,16 @@
                 <div class="card-body">
                     <form id="quiz-form">
                         <label class="form-check-label">
-                            <input type="radio" name="question3" value="Revenge of the Sith (Correct Answer)" class="form-check-input"> The Bad Batch
+                            <input type="radio" name="question3" value="The Bad Batch" class="form-check-input" onclick="updateUserAnswers(3, value)"> The Bad Batch
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question3" value="A New Hope" class="form-check-input"> A New Hope
+                            <input type="radio" name="question3" value="A New Hope" class="form-check-input" onclick="updateUserAnswers(3, value)"> A New Hope
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question3" value="The Bad Batch" class="form-check-input"> Revenge of the Sith (Correct Answer)
+                            <input type="radio" name="question3" value="Revenge of the Sith" class="form-check-input" onclick="updateUserAnswers(3, value)"> Revenge of the Sith (Correct Answer)
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question3" value="The Clone Wars" class="form-check-input"> The Clone Wars
+                            <input type="radio" name="question3" value="The Clone Wars" class="form-check-input" onclick="updateUserAnswers(3, value)"> The Clone Wars
                         </label>
                     </form>
                     <div class="result-container">Revenge of the Sith</div>
@@ -116,16 +117,16 @@
                 <div class="card-body">
                     <form id="quiz-form">
                         <label class="form-check-label">
-                            <input type="radio" name="question4" value="A New Hope (Correct Answer)" class="form-check-input"> Return of the Jedi
+                            <input type="radio" name="question4" value="Return of the Jedi" class="form-check-input" onclick="updateUserAnswers(4, value)"> Return of the Jedi
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question4" value="The Empire Strikes Back" class="form-check-input"> The Empire Strikes Back
+                            <input type="radio" name="question4" value="The Empire Strikes Back" class="form-check-input" onclick="updateUserAnswers(4, value)"> The Empire Strikes Back
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question4" value="Return of the Jedi" class="form-check-input"> A New Hope (Correct Answer)
+                            <input type="radio" name="question4" value="A New Hope" class="form-check-input" onclick="updateUserAnswers(4, value)"> A New Hope
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question4" value="The Phantom Menace" class="form-check-input"> The Phantom Menace
+                            <input type="radio" name="question4" value="The Phantom Menace" class="form-check-input" onclick="updateUserAnswers(4, value)"> The Phantom Menace
                         </label>
                     </form>
                     <div class="result-container">A New Hope</div>
@@ -143,16 +144,16 @@
                     <form id="quiz-form">
                         <p class="card-text"></p>
                         <label class="form-check-label">
-                            <input type="radio" name="question5" value="The Empire Strikes Back (Correct Answer)" class="form-check-input"> A New Hope
+                            <input type="radio" name="question5" value="A New Hope" class="form-check-input" onclick="updateUserAnswers(5, value)"> A New Hope
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question5" value="A New Hope" class="form-check-input"> The Empire Strikes Back (Correct Answer)
+                            <input type="radio" name="question5" value="The Empire Strikes Back" class="form-check-input" onclick="updateUserAnswers(5, value)"> The Empire Strikes Back
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question5" value="Return of the Jedi" class="form-check-input"> Return of the Jedi
+                            <input type="radio" name="question5" value="Return of the Jedi" class="form-check-input" onclick="updateUserAnswers(5, value)"> Return of the Jedi
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question5" value="Attack of the Clones" class="form-check-input"> Attack of the Clones
+                            <input type="radio" name="question5" value="Attack of the Clones" class="form-check-input" onclick="updateUserAnswers(5, value)"> Attack of the Clones
                         </label>
                     </form>
                     <div class="result-container">The Empire Strikes Back</div>
@@ -170,16 +171,16 @@
                     <form id="quiz-form">
                         <p class="card-text"></p>
                         <label class="form-check-label">
-                            <input type="radio" name="question6" value="Return of the Jedi (Correct Answer)" class="form-check-input"> Revenge of the Sith
+                            <input type="radio" name="question6" value="Revenge of the Sith" class="form-check-input" onclick="updateUserAnswers(6, value)"> Revenge of the Sith
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question6" value="A New Hope" class="form-check-input"> A New Hope
+                            <input type="radio" name="question6" value="A New Hope" class="form-check-input" onclick="updateUserAnswers(6, value)"> A New Hope
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question6" value="The Empire Strikes Back" class="form-check-input"> The Empire Strikes Back
+                            <input type="radio" name="question6" value="The Empire Strikes Back" class="form-check-input" onclick="updateUserAnswers(6, value)"> The Empire Strikes Back
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question6" value="Revenge of the Sith" class="form-check-input"> Return of the Jedi (Correct Answer)
+                            <input type="radio" name="question6" value="Return of the Jedi" class="form-check-input" onclick="updateUserAnswers(6, value)"> Return of the Jedi
                         </label>
                     </form>
                     <div class="result-container">Return of the Jedi</div>
@@ -197,16 +198,16 @@
                     <form id="quiz-form">
                         <p class="card-text"></p>
                         <label class="form-check-label">
-                            <input type="radio" name="question7" value="The Force Awakens (Correct Answer)" class="form-check-input"> The Rise of Skywalker
+                            <input type="radio" name="question7" value="The Rise of Skywalker" class="form-check-input" onclick="updateUserAnswers(7, value)"> The Rise of Skywalker
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question7" value="The Last Jedi" class="form-check-input"> The Last Jedi
+                            <input type="radio" name="question7" value="The Last Jedi" class="form-check-input" onclick="updateUserAnswers(7, value)"> The Last Jedi
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question7" value="The Rise of Skywalker" class="form-check-input"> The Force Awakens (Correct Answer)
+                            <input type="radio" name="question7" value="The Force Awakens" class="form-check-input" onclick="updateUserAnswers(7, value)"> The Force Awakens
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question7" value="Rogue One" class="form-check-input"> Rogue One
+                            <input type="radio" name="question7" value="Rogue One" class="form-check-input" onclick="updateUserAnswers(7, value)"> Rogue One
                         </label>
                     </form>
                     <div class="result-container">The Force Awakens</div>
@@ -224,16 +225,16 @@
                     <form id="quiz-form">
                         <p class="card-text"></p>
                         <label class="form-check-label">
-                            <input type="radio" name="question8" value="The Last Jedi (Correct Answer)" class="form-check-input"> The Last Jedi (Correct Answer)
+                            <input type="radio" name="question8" value="The Last Jedi" class="form-check-input" onclick="updateUserAnswers(8, value)"> The Last Jedi
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question8" value="The Force Awakens" class="form-check-input"> The Force Awakens
+                            <input type="radio" name="question8" value="The Force Awakens" class="form-check-input" onclick="updateUserAnswers(8, value)"> The Force Awakens
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question8" value="The Rise of Skywalker" class="form-check-input"> The Rise of Skywalker
+                            <input type="radio" name="question8" value="The Rise of Skywalker" class="form-check-input" onclick="updateUserAnswers(8, value)"> The Rise of Skywalker
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question8" value="Solo" class="form-check-input"> Solo
+                            <input type="radio" name="question8" value="Solo" class="form-check-input" onclick="updateUserAnswers(8, value)"> Solo
                         </label>
                     </form>
                     <div class="result-container">The Last Jedi</div>
@@ -251,16 +252,16 @@
                     <form id="quiz-form">
                         <p class="card-text"></p>
                         <label class="form-check-label">
-                            <input type="radio" name="question9" value="The Rise of Skywalker (Correct Answer)" class="form-check-input"> The Rise of Skywalker (Correct Answer)
+                            <input type="radio" name="question9" value="The Rise of Skywalker" class="form-check-input" onclick="updateUserAnswers(9, value)"> The Rise of Skywalker
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question9" value="The Force Awakens" class="form-check-input"> The Force Awakens
+                            <input type="radio" name="question9" value="The Force Awakens" class="form-check-input" onclick="updateUserAnswers(9, value)"> The Force Awakens
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question9" value="The Last Jedi" class="form-check-input"> The Last Jedi
+                            <input type="radio" name="question9" value="The Last Jedi" class="form-check-input" onclick="updateUserAnswers(9, value)"> The Last Jedi
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question9" value="Rogue One" class="form-check-input"> Rogue One
+                            <input type="radio" name="question9" value="Rogue One" class="form-check-input" onclick="updateUserAnswers(9, value)"> Rogue One
                         </label>
                     </form>
                     <div class="result-container">The Rise of Skywalker</div>
@@ -278,16 +279,16 @@
                     <form id="quiz-form">
                         <p class="card-text"></p>
                         <label class="form-check-label">
-                            <input type="radio" name="question10" value="Rogue One: A Star Wars Story (Correct Answer)" class="form-check-input"> Rogue One: A Star Wars Story
+                            <input type="radio" name="question10" value="Rogue One: A Star Wars Story" class="form-check-input" onclick="updateUserAnswers(10, value)"> Rogue One: A Star Wars Story
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question10" value="Solo: A Star Wars Story" class="form-check-input"> Solo: A Star Wars Story (Correct Answer)
+                            <input type="radio" name="question10" value="Solo: A Star Wars Story" class="form-check-input" onclick="updateUserAnswers(10, value)"> Solo: A Star Wars Story
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question10" value="The Force Awakens" class="form-check-input"> The Force Awakens
+                            <input type="radio" name="question10" value="The Force Awakens" class="form-check-input" onclick="updateUserAnswers(10, value)"> The Force Awakens
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question10" value="The Last Jedi" class="form-check-input"> The Last Jedi
+                            <input type="radio" name="question10" value="The Last Jedi" class="form-check-input" onclick="updateUserAnswers(10, value)"> The Last Jedi
                         </label>
                     </form>
                     <div class="result-container">Rogue One: A Star Wars Story</div>
@@ -305,16 +306,16 @@
                     <form id="quiz-form">
                         <p class="card-text"></p>
                         <label class="form-check-label">
-                            <input type="radio" name="question11" value="Solo: A Star Wars Story (Correct Answer)" class="form-check-input"> Solo: A Star Wars Story (Correct Answer)
+                            <input type="radio" name="question11" value="Solo: A Star Wars Story" class="form-check-input" onclick="updateUserAnswers(11, value)"> Solo: A Star Wars Story
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question11" value="Rogue One: A Star Wars Story" class="form-check-input"> Rogue One: A Star Wars Story
+                            <input type="radio" name="question11" value="Rogue One: A Star Wars Story" class="form-check-input" onclick="updateUserAnswers(11, value)"> Rogue One: A Star Wars Story
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question11" value="The Empire Strikes Back" class="form-check-input"> The Empire Strikes Back
+                            <input type="radio" name="question11" value="The Empire Strikes Back" class="form-check-input" onclick="updateUserAnswers(11, value)"> The Empire Strikes Back
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question11" value="The Rise of Skywalker" class="form-check-input"> The Rise of Skywalker
+                            <input type="radio" name="question11" value="The Rise of Skywalker" class="form-check-input" onclick="updateUserAnswers(11, value)"> The Rise of Skywalker
                         </label>
                     </form>
                     <div class="result-container">Solo: A Star Wars Story</div>
@@ -332,16 +333,16 @@
                     <form id="quiz-form">
                         <p class="card-text"></p>
                         <label class="form-check-label">
-                            <input type="radio" name="question12" value="The Clone Wars (Correct Answer)" class="form-check-input"> The Mandalorian
+                            <input type="radio" name="question12" value="The Mandalorian" class="form-check-input" onclick="updateUserAnswers(12, value)"> The Mandalorian
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question12" value="Star Wars Rebels" class="form-check-input"> Star Wars Rebels
+                            <input type="radio" name="question12" value="Star Wars Rebels" class="form-check-input" onclick="updateUserAnswers(12, value)"> Star Wars Rebels
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question12" value="The Mandalorian" class="form-check-input"> The Clone Wars (Correct Answer)
+                            <input type="radio" name="question12" value="The Clone Wars" class="form-check-input" onclick="updateUserAnswers(12, value)"> The Clone Wars
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question12" value="The Bad Batch" class="form-check-input"> The Bad Batch
+                            <input type="radio" name="question12" value="The Bad Batch" class="form-check-input" onclick="updateUserAnswers(12, value)"> The Bad Batch
                         </label>
                     </form>
                     <div class="result-container">The Clone Wars</div>
@@ -359,16 +360,16 @@
                     <form id="quiz-form">
                         <p class="card-text"></p>
                         <label class="form-check-label">
-                            <input type="radio" name="question13" value="Star Wars Rebels (Correct Answer)" class="form-check-input"> Andor
+                            <input type="radio" name="question13" value="Andor" class="form-check-input" onclick="updateUserAnswers(13, value)"> Andor
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question13" value="The Clone Wars" class="form-check-input"> The Clone Wars
+                            <input type="radio" name="question13" value="The Clone Wars" class="form-check-input" onclick="updateUserAnswers(13, value)"> The Clone Wars
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question13" value="The Mandalorian" class="form-check-input"> The Mandalorian
+                            <input type="radio" name="question13" value="The Mandalorian" class="form-check-input" onclick="updateUserAnswers(13, value)"> The Mandalorian
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question13" value="Andor" class="form-check-input"> Star Wars Rebels (Correct Answer)
+                            <input type="radio" name="question13" value="Star Wars Rebels" class="form-check-input" onclick="updateUserAnswers(13, value)"> Star Wars Rebels
                         </label>
                     </form>
                     <div class="result-container">Star Wars Rebels</div>
@@ -387,16 +388,16 @@
                     <form id="quiz-form">
                         <p class="card-text"></p>
                         <label class="form-check-label">
-                            <input type="radio" name="question14" value="The Mandalorian (Correct Answer)" class="form-check-input"> The Clone Wars
+                            <input type="radio" name="question14" value="The Clone Wars" class="form-check-input" onclick="updateUserAnswers(14, value)"> The Clone Wars
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question14" value="Star Wars Rebels" class="form-check-input"> Star Wars Rebels
+                            <input type="radio" name="question14" value="Star Wars Rebels" class="form-check-input" onclick="updateUserAnswers(14, value)"> Star Wars Rebels
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question14" value="The Clone Wars" class="form-check-input"> The Mandalorian (Correct Answer)
+                            <input type="radio" name="question14" value="The Mandalorian" class="form-check-input" onclick="updateUserAnswers(14, value)"> The Mandalorian
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question14" value="Obi-Wan Kenobi" class="form-check-input"> Obi-Wan Kenobi
+                            <input type="radio" name="question14" value="Obi-Wan Kenobi" class="form-check-input" onclick="updateUserAnswers(14, value)"> Obi-Wan Kenobi
                         </label>
                     </form>
                     <div class="result-container">The Mandalorian</div>
@@ -414,16 +415,16 @@
                     <form id="quiz-form">
                         <p class="card-text"></p>
                         <label class="form-check-label">
-                            <input type="radio" name="question15" value="The Bad Batch (Correct Answer)" class="form-check-input"> The Clone Wars
+                            <input type="radio" name="question15" value="The Clone Wars" class="form-check-input" onclick="updateUserAnswers(15, value)"> The Clone Wars
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question15" value="The Clone Wars" class="form-check-input"> The Bad Batch (Correct Answer)
+                            <input type="radio" name="question15" value="The Bad Batch" class="form-check-input" onclick="updateUserAnswers(15, value)"> The Bad Batch
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question15" value="Star Wars Rebels" class="form-check-input"> Star Wars Rebels
+                            <input type="radio" name="question15" value="Star Wars Rebels" class="form-check-input" onclick="updateUserAnswers(15, value)"> Star Wars Rebels
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question15" value="Andor" class="form-check-input"> Andor
+                            <input type="radio" name="question15" value="Andor" class="form-check-input" onclick="updateUserAnswers(15, value)"> Andor
                         </label>
                     </form>
                     <div class="result-container">The Bad Batch</div>
@@ -441,16 +442,16 @@
                     <form id="quiz-form">
                         <p class="card-text"></p>
                         <label class="form-check-label">
-                            <input type="radio" name="question16" value="Andor (Correct Answer)" class="form-check-input"> Andor (Correct Answer)
+                            <input type="radio" name="question16" value="Andor" class="form-check-input" onclick="updateUserAnswers(16, value)"> Andor
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question16" value="Obi-Wan Kenobi" class="form-check-input"> Obi-Wan Kenobi
+                            <input type="radio" name="question16" value="Obi-Wan Kenobi" class="form-check-input" onclick="updateUserAnswers(16, value)"> Obi-Wan Kenobi
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question16" value="The Mandalorian" class="form-check-input"> The Mandalorian
+                            <input type="radio" name="question16" value="The Mandalorian" class="form-check-input" onclick="updateUserAnswers(16, value)"> The Mandalorian
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question16" value="The Bad Batch" class="form-check-input"> The Bad Batch
+                            <input type="radio" name="question16" value="The Bad Batch" class="form-check-input" onclick="updateUserAnswers(16, value)"> The Bad Batch
                         </label>
                     </form>
                     <div class="result-container">Andor</div>
@@ -460,7 +461,7 @@
 
             <!-- Question 17 -->
             <!-- Obi-Wan Kenobi -->
-            <div class="card mb-3 dark-theme">
+            <div class="card mb-3 light-theme">
                 <div class="card-header ">
                     <h2>A live-action series exploring Obi-Wan Kenobi's life after the fall of the Jedi Order. What is the title of this story?</h2>
                 </div>
@@ -468,19 +469,18 @@
                     <form id="quiz-form">
                         <p class="card-text"></p>
                         <label class="form-check-label">
-                            <input type="radio" name="question17" value="Obi-Wan Kenobi (Correct Answer)" class="form-check-input"> The Bad Batch
+                            <input type="radio" name="question17" value="The Bad Batch" class="form-check-input" onclick="updateUserAnswers(17, value)"> The Bad Batch
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question17" value="Andor" class="form-check-input"> Andor
+                            <input type="radio" name="question17" value="Andor" class="form-check-input" onclick="updateUserAnswers(17, value)"> Andor
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question17" value="The Mandalorian" class="form-check-input"> The Mandalorian
+                            <input type="radio" name="question17" value="The Mandalorian" class="form-check-input" onclick="updateUserAnswers(17, value)"> The Mandalorian
                         </label>
                         <label class="form-check-label">
-                            <input type="radio" name="question17" value="The Bad Batch" class="form-check-input"> Obi-Wan Kenobi (Correct Answer)
-                        </label>
+                            <input type="radio" name="question17" value="Kenobi" class="form-check-input" onclick="updateUserAnswers(17, value)"> Kenobi
                     </form>
-                    <div class="result-container">Obi-Wan Kenobi</div>
+                    <div class="result-container">Kenobi</div>
                 </div>
             </div>
             <button class="button" onclick="nextQuestion()">Submit</button>    
@@ -492,8 +492,9 @@
     <div id="results-page" class="page" style="display: none;">
         <div class="container mt-5">
             <h2>Star Wars Quiz - Results</h2>
-            <p id="result-percentage"></p>
+            <p id="result-percentage" ></p>
             <ul id="correct-options-list"></ul>
+            <ul id="movies-to-watch-list"></ul>
             <button class="button" onclick="restartQuiz()">Restart Quiz</button>
         </div>
     </div>

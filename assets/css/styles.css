@@ -1,75 +1,6 @@
 
 /* css */
-/* body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-    
-} */
 
-/* div {
-    color: #f0f0f0;
-}
-
-.page {
-    text-align: center;
-    padding: 20px;
-    /* display: none; */
-    /* background-color: #04080F; */
-/* } */
-
-/* .container {
-    text-align: center;
-    
-} */
-
-/* button {
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none
-}
-
-#toggleButtonColor {
-    background-color: #3498db;
-    color: #fff;
-    padding: 10px 20px;
-    /* border: none; */
-    /* cursor: pointer; */
-/* } */
-
-/* #toggleButtonFontColor {
-    background-color: #bf0603;
-    color: #fff;
-    padding: 10px;
-    cursor: pointer;
-    border: none;
-} */
-
-/* #buttonBar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #363636;
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    
-} */
-
-/* #buttonBar button {
-    margin-right: 10px;
-}
-
-form {
-    background-color: #636363;
-}
-
-#background {
-    background-color: #363636;
-} */
 
 .form-check-label, .form-check-input {
     display: inline-block;
@@ -112,6 +43,7 @@ body {
 #buttonBar {
     text-align: center;
     margin-top: 20px;
+    background-color: #141414;
 }
 
 .button {
@@ -141,11 +73,15 @@ body {
 .light-theme {
     background-color: #fff;
     color: #333;
+    background-image: url('assets/img/LightScreen-background.jpg'); /* Replace 'light-theme-background.jpg' with the path to your light theme background image */
+    background-size: cover;
 }
 
 /* Add more styles for your dark theme */
 .dark-theme {
     background-color: #333;
     color: #fff;
+    background-image: url('assets/img/DarkScreen-background.jpg'); /* Replace 'light-theme-background.jpg' with the path to your light theme background image */
+    background-size: cover;
 }
 /* Additional styles can be added based on your preferences */
